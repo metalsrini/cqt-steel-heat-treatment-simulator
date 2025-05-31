@@ -3,7 +3,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+# Allow frontend package-lock.json but exclude others
 package-lock.json
+!web_application/frontend/package-lock.json
 
 # Production builds
 build/
