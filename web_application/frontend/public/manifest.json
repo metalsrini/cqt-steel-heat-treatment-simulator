@@ -1,0 +1,78 @@
+{
+  "short_name": "C-Q-T Simulator",
+  "name": "C-Q-T Steel Heat Treatment Simulator",
+  "description": "Professional ICME Framework for Carburizing-Quenching-Tempering Process Analysis and Simulation",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1976d2",
+  "background_color": "#f5f5f5",
+  "orientation": "landscape-primary",
+  "scope": "/",
+  "categories": ["productivity", "utilities", "engineering", "education"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "C-Q-T Simulator Dashboard"
+    },
+    {
+      "src": "screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "C-Q-T Simulator Mobile View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Quick Simulation",
+      "short_name": "Simulate",
+      "description": "Start a new heat treatment simulation",
+      "url": "/?tab=0",
+      "icons": [{ "src": "icons/simulate.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Material Comparison",
+      "short_name": "Compare",
+      "description": "Compare different steel grades",
+      "url": "/?tab=2",
+      "icons": [{ "src": "icons/compare.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Process Optimization",
+      "short_name": "Optimize",
+      "description": "Optimize process parameters",
+      "url": "/?tab=3",
+      "icons": [{ "src": "icons/optimize.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://cqt-simulator.example.com/manifest.json"
+    }
+  ],
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9"
+}

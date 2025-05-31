@@ -1,0 +1,69 @@
+services:
+  # Backend API Service
+  - type: web
+    name: cqt-steel-simulator-backend
+    env: python
+    region: oregon
+    buildCommand: |
+      cd web_application/backend
+      pip install -r requirements.txt
+    startCommand: |
+      cd web_application/backend
+      python main.py
+    envVars:
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: LOG_LEVEL
+        value: info
+      - key: ALLOWED_ORIGINS
+        value: https://cqt-steel-simulator-frontend.onrender.com
+    healthCheckPath: /api/health
+    disk:
+      name: backend-disk
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+    
+  # Frontend Static Site Service  
+  - type: web
+    name: cqt-steel-simulator-frontend
+    env: static
+    region: oregon
+    buildCommand: |
+      cd web_application/frontend
+      npm ci
+      npm run build
+    staticPublishPath: web_application/frontend/build
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: REACT_APP_API_URL
+        value: https://cqt-steel-simulator-backend.onrender.com
+      - key: REACT_APP_ENVIRONMENT
+        value: production
+      - key: GENERATE_SOURCEMAP
+        value: false
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases: []

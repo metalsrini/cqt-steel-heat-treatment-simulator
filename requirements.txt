@@ -1,0 +1,113 @@
+# Core Scientific Computing
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.5.0
+pandas>=1.3.0
+
+# Finite Element Analysis (Open Source Alternative to ABAQUS)
+fenics>=2019.1.0
+mshr>=2019.1.0
+dolfin-adjoint>=2019.1.0
+
+# Alternative FEM Libraries
+scikit-fem>=7.0.0
+pymks>=0.3.4
+
+# Mathematical Optimization
+scikit-optimize>=0.9.0
+nlopt>=2.7.0
+
+# Data Handling and Configuration
+PyYAML>=6.0
+jsonschema>=4.0.0
+h5py>=3.7.0
+netcdf4>=1.6.0
+
+# Visualization and Plotting
+plotly>=5.0.0
+seaborn>=0.11.0
+bokeh>=2.4.0
+mayavi>=4.8.0
+vtk>=9.1.0
+
+# Performance and Parallel Computing
+numba>=0.56.0
+joblib>=1.1.0
+mpi4py>=3.1.0
+petsc4py>=3.17.0
+
+# Progress Bars and Utilities
+tqdm>=4.64.0
+click>=8.0.0
+colorama>=0.4.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.8.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.971
+
+# Documentation
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+nbsphinx>=0.8.0
+sphinx-autodoc-typehints>=1.19.0
+
+# Jupyter and Interactive Development
+jupyter>=1.0.0
+jupyterlab>=3.4.0
+ipywidgets>=8.0.0
+ipympl>=0.9.0
+
+# Machine Learning (for advanced optimization)
+scikit-learn>=1.1.0
+tensorflow>=2.9.0
+torch>=1.12.0
+
+# Steel Database and Materials
+pymatgen>=2022.7.0
+ASE>=3.22.0
+
+# CAD and Geometry Processing
+FreeCAD>=0.20.0
+opencascade-python>=7.6.0
+trimesh>=3.15.0
+
+# Interpolation and Curve Fitting
+interpolation>=2.2.0
+pyspline>=1.6.0
+
+# Statistical Analysis
+statsmodels>=0.13.0
+pingouin>=0.5.0
+
+# File Format Support
+xlsxwriter>=3.0.0
+openpyxl>=3.0.0
+xmltodict>=0.13.0
+
+# Memory Profiling and Performance
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+psutil>=5.9.0
+
+# Network and Web Interface (for ICME integration)
+requests>=2.28.0
+flask>=2.2.0
+fastapi>=0.78.0
+uvicorn>=0.18.0
+
+# Database Support
+SQLAlchemy>=1.4.0
+sqlite3
+
+# Image Processing (for metallography)
+opencv-python>=4.6.0
+scikit-image>=0.19.0
+pillow>=9.2.0
+
+# Command Line Interface
+argparse
+pathlib
