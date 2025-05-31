@@ -1,7 +1,8 @@
 {
   "name": "cqt-steel-simulator-frontend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
+  "_comment": "Build trigger for Render deployment - 2025-05-31",
   "description": "Professional web interface for C-Q-T Steel Heat Treatment Simulator",
   "homepage": ".",
   "dependencies": {
