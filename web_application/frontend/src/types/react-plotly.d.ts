@@ -1,3 +1,59 @@
+declare module 'plotly.js' {
+  export interface PlotData {
+    x?: any[];
+    y?: any[];
+    z?: any[];
+    type?: string;
+    mode?: string;
+    name?: string;
+    line?: any;
+    marker?: any;
+    text?: any;
+    hovertemplate?: string;
+    showlegend?: boolean;
+    [key: string]: any;
+  }
+
+  export interface Layout {
+    title?: string | { text: string; [key: string]: any };
+    xaxis?: any;
+    yaxis?: any;
+    width?: number;
+    height?: number;
+    margin?: any;
+    showlegend?: boolean;
+    legend?: any;
+    font?: any;
+    plot_bgcolor?: string;
+    paper_bgcolor?: string;
+    [key: string]: any;
+  }
+
+  export interface Config {
+    displayModeBar?: boolean;
+    displaylogo?: boolean;
+    modeBarButtonsToRemove?: string[];
+    responsive?: boolean;
+    [key: string]: any;
+  }
+
+  export interface PlotMouseEvent {
+    points: any[];
+    event: MouseEvent;
+  }
+
+  export interface PlotRelayoutEvent {
+    [key: string]: any;
+  }
+
+  export interface PlotSelectionEvent {
+    points: any[];
+    [key: string]: any;
+  }
+
+  export type Data = PlotData;
+}
+
 declare module 'react-plotly.js' {
   import { Component } from 'react';
   import { PlotData, Layout, Config, PlotMouseEvent, PlotRelayoutEvent, PlotSelectionEvent } from 'plotly.js';
